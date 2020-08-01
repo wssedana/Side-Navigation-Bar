@@ -1,48 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Side Navigation Bar</title>
-	<link rel="stylesheet" href="styles.css">
-	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
 </head>
+
 <body>
 
-<div class="wrapper">
+  <div class="wrapper">
     <div class="sidebar">
-        <h2>PDAM SOFT</h2>
-        <ul>
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-            <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
-            <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
-            <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
-        </ul> 
-        <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+      <h2>PDAM SOFT</h2>
+      <ul>
+        <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+        <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
+        <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
+        <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
+        <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
+        <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
+        <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
+      </ul>
+      <div class="social_media">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </div>
     <div class="main_content">
-        <div class="header">
-          <ul>
-            <li><a href="#">Contoh</li>
-            <li><a href="#">Contoh</li>
-            <li><a href="#">Contoh</li>
-            <li><a href="#">Contoh</li>
-            <li><a href="#">Contoh</li>
-          </ul>
-        </div>  
-        <div class="info">
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+      <div class="header">
+        <ul>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+        </ul>
+        <div class="menu-toggle">
+          <input type="checkbox" id="cek" />
+          <i class="fas fa-search" id="cari"></i>
+        </div>
+      </div>
+      <div class="info">
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
+          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
+          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
+          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
+          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
+          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
+          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
+          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
+          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
+          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
+          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
+          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
+          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
+          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
+          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
+          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
+          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
+          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
+          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
       </div>
     </div>
-</div>
+  </div>
 
 </body>
+
 </html>
+<script>
+  $(document).ready(function () {
+    $('#cek').click(function () {
+      if (this.checked) {
+        $('#cari').removeClass('fa-search');
+        $('#cari').addClass('fa-times')
+      } else {
+        $('#cari').removeClass('fa-times')
+        $('#cari').addClass('fa-search');
+      }
+    });
+  });
+</script>
