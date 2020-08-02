@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <title>Side Navigation Bar</title>
   <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
 
   <!-- js -->
@@ -28,20 +30,19 @@
         <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
         <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
       </ul>
-      <div class="social_media">
+      <!-- <div class="social_media">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+      </div> -->
     </div>
     <div class="main_content">
       <div class="header">
         <ul>
-          <li><a href="#">Contoh</li>
-          <li><a href="#">Contoh</li>
-          <li><a href="#">Contoh</li>
-          <li><a href="#">Contoh</li>
-          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</a></li>
+          <li><a href="#">Contoh</a> </li>
+          <li><a href="#">Contoh</a> </li>
+          <li><a href="#">Contoh</a> </li>
         </ul>
         <div class="menu-toggle">
           <input type="checkbox" id="cek" />
@@ -49,30 +50,57 @@
         </div>
       </div>
       <div class="info">
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
-          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
-          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
-          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
-          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
-          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
-          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
-          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
-          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
-          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
-          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
-          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
-          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit
-          natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum
-          tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam
-          tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis
-          facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias
-          repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni
-          omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover table-bordered">
+            <thead>
+              <th>Nama :</th>
+              <th>No :</th>
+              <th>Kelas :</th>
+              <th>Mata Kuliah </th>
+              <th>hobby</th>
+              <th>Makanan</th>
+              <th>Nama :</th>
+              <th>No :</th>
+              <th>Kelas :</th>
+              <th>Mata Kuliah </th>
+              <th>hobby</th>
+              <th>Makanan</th>
+              <th>hobby</th>
+              <th>Makanan</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+                <td>Nama :</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      <div class="filter" id="filter">
+        <ul>
+          <li><a href="#">HAHAH</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">Contoh</li>
+          <li><a href="#">HAHAHA</li>
+        </ul>
+      </div>
+
     </div>
-  </div>
 
 </body>
 
@@ -82,10 +110,15 @@
     $('#cek').click(function () {
       if (this.checked) {
         $('#cari').removeClass('fa-search');
-        $('#cari').addClass('fa-times')
+        $('#cari').addClass('fa-times');
+        $('#filter').removeClass('filter');
+        $('#filter').addClass('filter2');
+
       } else {
-        $('#cari').removeClass('fa-times')
+        $('#cari').removeClass('fa-times');
         $('#cari').addClass('fa-search');
+        $('#filter').addClass('filter');
+        $('#filter').removeClass('filter2');
       }
     });
   });

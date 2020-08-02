@@ -11,6 +11,7 @@
 
 body{
    background-color: #f3f5f9;
+   overflow: hidden;
 }
 
 .wrapper{
@@ -25,6 +26,7 @@ body{
   padding: 30px 0px;
   position: fixed;
 }
+
 
 .wrapper .sidebar h2{
   color:  rgb(170, 245, 253);
@@ -124,10 +126,78 @@ body{
 
 .wrapper .main_content .info{
   margin: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100%;
   color: #717171;
   line-height: 25px;
 }
 
+.wrapper .main_content .filter{
+ 
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 20%;
+  height: 100vh;
+  align-items: center;
+  background-color:#fff;
+  z-index: 2;
+  transform: translateX(100%);
+  transition: all 1s;
+}
+
+.wrapper .main_content .filter2{
+  position: absolute;
+  right: 0;
+  top: 60px;
+  width: 20%;
+  height: 100vh;
+  align-items: center;
+  background-color:#fff;
+  z-index: 2;
+  transform: translateX(0);
+  transition: all 1s;
+}
+
+.wrapper .main_content .filter ul{
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.wrapper .main_content .filter ul li{
+  padding: 15px;
+}
+
+.wrapper .main_content .filter2 ul{
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.wrapper .main_content .filter2 ul li{
+  padding: 15px;
+}
+
 .wrapper .main_content .info div{
   margin-bottom: 20px;
+}
+
+/* Setel ukuran layar TABLET */
+@media screen and (max-width : 768px){
+  .wrapper .main_content .header ul{
+    width: 90%;
+  }
+}
+
+/* Setel ukuran layar Mobile */
+@media screen and (max-width : 576px){
+  .wrapper .main_content .header ul{
+    width: 100%;
+  }
+  .wrapper .sidebar{
+    width: 100px;
+  }
+  .wrapper .main_content{
+    margin-left: 100px;
+  }
 }
